@@ -1,9 +1,11 @@
+import Script from "next/script";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <>
+      <Script src="https://embed.twentyuno.net/js/app.js"></Script>
       <Head>
         <title>Dolu</title>
         <meta name="description" content="Dolu's homepage" />
@@ -68,6 +70,15 @@ export default function Home() {
             59b96df8d8b5e66b3b95a3e1ba159750a6edd69bcbba1857aeb652a5b208bd59
           </div>
         </div>
+
+        <h3>Tips</h3>
+        <lightning-widget
+          name="Dolu"
+          accent="#000000"
+          to="dolu89@ln.tips"
+          image="https://pbs.twimg.com/profile_images/1577320325158682626/igGerO9A_400x400.jpg"
+          amounts="1000,10000,100000"
+        />
       </main>
     </>
   );
