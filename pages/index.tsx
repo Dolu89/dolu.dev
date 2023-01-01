@@ -28,9 +28,9 @@ export default function Home() {
         </ul>
 
         <div>
-          I'm a fullstack web developer in freelance, with a preference for backend
-          development. I primarily work on open source applications for Bitcoin/Lightning
-          network, and Nostr.
+          I&apos;m a fullstack web developer in freelance, with a preference for
+          backend development. I primarily work on open source applications for
+          Bitcoin/Lightning network, and Nostr.
         </div>
 
         <h2>My main projects</h2>
