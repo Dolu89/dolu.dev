@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/.well-known/nostr.json?name=dolu",
+            "destination": "/api/nip05"
+        }
+    ]
+}
