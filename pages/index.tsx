@@ -42,6 +42,9 @@ export default function Home() {
             authentication server (using LNURL-auth)
           </li>
           <li className={styles.project}>
+            <a href="https://github.com/zerologin/zerologin-mobile">Zerologin mobile</a> mobile app for private keys holding and authentication
+          </li>
+          <li className={styles.project}>
             <a href="https://bips.xyz">Bips.xyz</a> the easiest way to view and
             share BIPs
           </li>
@@ -67,7 +70,7 @@ export default function Home() {
           </div>
           <div>
             Nostr
-            59b96df8d8b5e66b3b95a3e1ba159750a6edd69bcbba1857aeb652a5b208bd59
+            npub1txukm7xckhnxkwu450sm59vh2znwm45mewaps4awkef2tvsgh4vsf7phrl
           </div>
         </div>
 
