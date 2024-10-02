@@ -31,5 +31,14 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/content'],
   content: {
-  }
+  },
+
+  routeRules: {
+    '/.well-known/nostr.json': {
+      redirect: '/api/nip05', headers: {
+        "key": "Access-Control-Allow-Origin",
+        "value": "*"
+      }
+    },
+  },
 })
