@@ -3,12 +3,14 @@ import { type ReactElement } from 'react'
 import { client } from './client'
 import Layout from '~/layouts/default'
 import { type Data } from '@generated/data'
-import { createRoot } from 'react-dom/client'
+import { hydrateRoot } from 'react-dom/client'
 import { createInertiaApp } from '@inertiajs/react'
 import { TuyauProvider } from '@adonisjs/inertia/react'
 import { resolvePageComponent } from '@adonisjs/inertia/helpers'
 
-const appName = import.meta.env.VITE_APP_NAME || 'AdonisJS'
+// Falls back to 'Dolu' so the document title is always correct, even when the
+// production build runs without VITE_APP_NAME (the .env file is gitignored).
+const appName = import.meta.env.VITE_APP_NAME || 'Dolu'
 
 createInertiaApp({
   title: (title) => (title ? `${title} - ${appName}` : appName),
@@ -20,7 +22,8 @@ createInertiaApp({
     )
   },
   setup({ el, App, props }) {
-    createRoot(el).render(
+    hydrateRoot(
+      el,
       <TuyauProvider client={client}>
         <App {...props} />
       </TuyauProvider>

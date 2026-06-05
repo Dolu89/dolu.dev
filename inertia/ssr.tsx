@@ -7,9 +7,12 @@ import { createInertiaApp } from '@inertiajs/react'
 import { TuyauProvider } from '@adonisjs/inertia/react'
 import { resolvePageComponent } from '@adonisjs/inertia/helpers'
 
+const appName = import.meta.env.VITE_APP_NAME || 'Dolu'
+
 export default function render(page: any) {
   return createInertiaApp({
     page,
+    title: (title) => (title ? `${title} - ${appName}` : appName),
     render: ReactDOMServer.renderToString,
     resolve: (name) => {
       return resolvePageComponent(
